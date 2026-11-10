@@ -42,7 +42,7 @@ dependencies = [
 dynamic = ['readme', 'version']
 
 [project.optional-dependencies]
-email = ['email-validator>=1.0.3']
+email = ['email-validator>=2.3.0']
 dotenv = ['python-dotenv>=0.10.4']
 
 [project.entry-points.hypothesis]
