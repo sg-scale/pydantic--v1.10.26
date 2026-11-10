@@ -8,7 +8,7 @@ mdx-truly-sane-lists==1.3
 mkdocs==1.5.3
 mkdocs-exclude==1.0.2
 mkdocs-material==9.5.1
-pyupgrade==2.37.3
+pyupgrade==3.21.2
 sqlalchemy
 orjson
 ujson
