@@ -91,7 +91,7 @@ jobs:
       run: make docs
 
     - name: Store docs site
-      uses: actions/upload-artifact@v4
+      uses: actions/upload-artifact@v7
       with:
         name: docs
         path: site
@@ -211,7 +211,7 @@ jobs:
 
     - name: store coverage files
       if: ${{ matrix.enable-trace }}
-      uses: actions/upload-artifact@v4
+      uses: actions/upload-artifact@v7
       with:
         name: coverage-linux-compiled-${{ matrix.python-version }}
         path: coverage
@@ -279,7 +279,7 @@ jobs:
         CONTEXT: ${{ runner.os }}-py${{ matrix.python-version }}-without-deps
 
     - name: store coverage files
-      uses: actions/upload-artifact@v4
+      uses: actions/upload-artifact@v7
       with:
         name: coverage-${{ matrix.os }}-${{ matrix.python-version }}
         path: coverage
@@ -321,7 +321,7 @@ jobs:
         CONTEXT: linux-py3.10-mypy${{ matrix.mypy-version }}
 
     - name: store coverage files
-      uses: actions/upload-artifact@v4
+      uses: actions/upload-artifact@v7
       with:
         name: coverage-mypy${{ matrix.mypy-version }}
         path: coverage
@@ -353,7 +353,7 @@ jobs:
       - run: coverage html --show-contexts --title "pydantic coverage for ${{ github.sha }}"
 
       - name: Store coverage html
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: coverage-html
           path: htmlcov
@@ -422,7 +422,7 @@ jobs:
         twine check dist/*
 
     - name: Store dist artifacts
-      uses: actions/upload-artifact@v4
+      uses: actions/upload-artifact@v7
       with:
         name: pypi_files-3.${{ matrix.python-version }}-${{ matrix.platform || matrix.os }}
         path: dist
