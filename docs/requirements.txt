@@ -1,5 +1,5 @@
 autoflake==1.5.3
-ansi2html==1.8.0
+ansi2html==1.9.5
 flake8==6.1.0
 flake8-quotes==3.4.0
 hypothesis==6.79.1
